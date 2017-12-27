@@ -1,0 +1,20 @@
+{
+  "name": "blog_aplikacija",
+  "description": "Blog demo aplikacija",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.17.0",
+    "express": "4.x",
+    "hbs": "*",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "MIT"
+}

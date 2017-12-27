@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/addBlog" method="post">
+        <div class="form-group">
+            <label for="">Naziv Bloga</label>
+            <input type="text" name="naziv" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Sadrzaj Bloga</label>
+            <textarea name="sadrzaj" id="sadrzaj" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+        <input type="submit" value="Dodaj" class="btn btn-success">
+    </form>
+</body>
+<p id="user" hidden>{{username}}</p>
+</html>

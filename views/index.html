@@ -1,0 +1,23 @@
+<h1>Blog!</h1>
+{{#each entries}}
+<div class="row">
+    <div class="col-md-2">
+        <p>
+
+            <a href="/article/{{id}}">{{title}}</a>
+            <br/> Published: {{published}}
+        </p>
+    </div>
+    <div class="col-md-2">
+        <form action="/deleteBlog/{{id}}" method="post">
+            <input hidden type="submit" value="Delete" class="btn btn-danger btn-sm js-delete">
+        </form>
+    </div>
+</div>
+{{/each}}
+
+<p id="user" hidden>{{username}}</p>
+<br>
+<br>
+
+    <a href="/addBlog" class="btn btn-primary" hidden>Dodaj Blog</a>

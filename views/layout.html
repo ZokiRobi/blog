@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/login" id="login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout" id="logout" hidden>Log Out</a>
+      </li>
+      <li class="nav-item">
+        <p class="nav-link" id="greet" hidden>Hello {{username}} !!</p>
+      </li>
+    </ul>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+
+    {{{body}}}
+
+  </div>
+  <!-- /container -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+
+      $('.js-delete').click(() => {
+        if (!confirm('Delete Blog ?')) {
+          return false;
+        }
+      });
+
+
+      if ($('#user').text() === 'Admin') {
+        $('.btn').attr('hidden', false).addClass('animated rollIn');
+        $('#login').attr('hidden', true);
+        $('#logout').attr('hidden', false);
+      }
+
+      if ($('#user').text()) {
+        $('#greet').attr('hidden', false).addClass('animated tada');
+        $('#login').attr('hidden', true);
+        $('#logout').attr('hidden', false);
+      } else {
+        $('#greet').attr('hidden', true);
+      }
+
+    });
+  </script>
+</body>
+
+</html>
